@@ -1,0 +1,422 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>Sector Analysis - Portfolio Manager</title>
+    <link rel="stylesheet" href="styles.css">
+</head>
+<body>
+    <nav>
+        <div class="nav-container">
+            <a href="index.html" class="nav-brand">Portfolio Manager</a>
+            <ul class="nav-links">
+                <li><a href="index.html">Dashboard</a></li>
+                <li><a href="equities.html">Equities</a></li>
+                <li><a href="allocation.html">Allocation</a></li>
+                <li><a href="guidelines.html">Guidelines</a></li>
+                <li><a href="risk.html">Risk Analysis</a></li>
+                <li><a href="rules.html">Trading Rules</a></li>
+                <li><a href="sectors.html" class="active">Sectors</a></li>
+                <li><a href="deployment.html">Deployment Plan</a></li>
+            </ul>
+        </div>
+    </nav>
+
+    <div class="container">
+        <div class="page-header">
+            <h1>Sector Analysis</h1>
+            <p>Current equity portfolio sector distribution and concentration</p>
+        </div>
+
+        <!-- Sector Overview -->
+        <div class="grid grid-4">
+            <div class="stat-box primary">
+                <div class="stat-label">Total Sectors</div>
+                <div class="stat-value">7</div>
+                <div class="stat-label">Active sectors</div>
+            </div>
+            <div class="stat-box success">
+                <div class="stat-label">Total Holdings</div>
+                <div class="stat-value">11</div>
+                <div class="stat-label">Stocks across sectors</div>
+            </div>
+            <div class="stat-box warning">
+                <div class="stat-label">Largest Sector</div>
+                <div class="stat-value">3</div>
+                <div class="stat-label">Renewable Energy</div>
+            </div>
+            <div class="stat-box accent">
+                <div class="stat-label">Max Allowed</div>
+                <div class="stat-value">30%</div>
+                <div class="stat-label">Per sector limit</div>
+            </div>
+        </div>
+
+        <!-- Sector Distribution Table -->
+        <div class="card">
+            <h2>Sector Distribution</h2>
+            <div class="table-container">
+                <table>
+                    <thead>
+                        <tr>
+                            <th>Sector</th>
+                            <th>Number of Holdings</th>
+                            <th>% of Equity Portfolio</th>
+                            <th>Status</th>
+                        </tr>
+                    </thead>
+                    <tbody>
+                        <tr>
+                            <td><strong>Renewable Energy</strong></td>
+                            <td>3</td>
+                            <td>27.3%</td>
+                            <td><span class="badge medium-risk">Within Limit</span></td>
+                        </tr>
+                        <tr>
+                            <td><strong>Nuclear Energy</strong></td>
+                            <td>2</td>
+                            <td>18.2%</td>
+                            <td><span class="badge low-risk">Good</span></td>
+                        </tr>
+                        <tr>
+                            <td><strong>Data Centers</strong></td>
+                            <td>1</td>
+                            <td>9.1%</td>
+                            <td><span class="badge low-risk">Good</span></td>
+                        </tr>
+                        <tr>
+                            <td><strong>Quantum Computing</strong></td>
+                            <td>1</td>
+                            <td>9.1%</td>
+                            <td><span class="badge low-risk">Good</span></td>
+                        </tr>
+                        <tr>
+                            <td><strong>Software</strong></td>
+                            <td>1</td>
+                            <td>9.1%</td>
+                            <td><span class="badge low-risk">Good</span></td>
+                        </tr>
+                        <tr>
+                            <td><strong>AI Integration</strong></td>
+                            <td>1</td>
+                            <td>9.1%</td>
+                            <td><span class="badge low-risk">Good</span></td>
+                        </tr>
+                        <tr>
+                            <td><strong>Defense</strong></td>
+                            <td>0</td>
+                            <td>0%</td>
+                            <td><span class="badge pending">Not Allocated</span></td>
+                        </tr>
+                        <tr class="table-footer">
+                            <td><strong>Total</strong></td>
+                            <td><strong>11 (9 allocated)</strong></td>
+                            <td><strong>100%</strong></td>
+                            <td></td>
+                        </tr>
+                    </tbody>
+                </table>
+            </div>
+            <div class="info-box mt-3">
+                <strong>Note:</strong> Defense sector shows 0 holdings, but General Dynamics (GD) is classified under Aerospace & Defense. The count may reflect different sector classification methods.
+            </div>
+        </div>
+
+        <!-- Visual Sector Breakdown -->
+        <div class="card">
+            <h2>Sector Concentration Visualization</h2>
+            <div style="margin-top: 1.5rem;">
+                <div class="mb-3">
+                    <div style="display: flex; justify-content: space-between; align-items: center; margin-bottom: 0.5rem;">
+                        <strong>Renewable Energy</strong>
+                        <span>3 holdings (27.3%)</span>
+                    </div>
+                    <div class="progress-bar">
+                        <div class="progress-fill" style="width: 27.3%; background: linear-gradient(90deg, #27ae60, #2ecc71);">27.3%</div>
+                    </div>
+                </div>
+                <div class="mb-3">
+                    <div style="display: flex; justify-content: space-between; align-items: center; margin-bottom: 0.5rem;">
+                        <strong>Nuclear Energy</strong>
+                        <span>2 holdings (18.2%)</span>
+                    </div>
+                    <div class="progress-bar">
+                        <div class="progress-fill" style="width: 18.2%; background: linear-gradient(90deg, #3498db, #5dade2);">18.2%</div>
+                    </div>
+                </div>
+                <div class="mb-3">
+                    <div style="display: flex; justify-content: space-between; align-items: center; margin-bottom: 0.5rem;">
+                        <strong>Data Centers</strong>
+                        <span>1 holding (9.1%)</span>
+                    </div>
+                    <div class="progress-bar">
+                        <div class="progress-fill" style="width: 9.1%; background: linear-gradient(90deg, #9b59b6, #8e44ad);">9.1%</div>
+                    </div>
+                </div>
+                <div class="mb-3">
+                    <div style="display: flex; justify-content: space-between; align-items: center; margin-bottom: 0.5rem;">
+                        <strong>Quantum Computing</strong>
+                        <span>1 holding (9.1%)</span>
+                    </div>
+                    <div class="progress-bar">
+                        <div class="progress-fill" style="width: 9.1%; background: linear-gradient(90deg, #e74c3c, #c0392b);">9.1%</div>
+                    </div>
+                </div>
+                <div class="mb-3">
+                    <div style="display: flex; justify-content: space-between; align-items: center; margin-bottom: 0.5rem;">
+                        <strong>Software</strong>
+                        <span>1 holding (9.1%)</span>
+                    </div>
+                    <div class="progress-bar">
+                        <div class="progress-fill" style="width: 9.1%; background: linear-gradient(90deg, #f39c12, #f1c40f); color: #856404;">9.1%</div>
+                    </div>
+                </div>
+                <div class="mb-3">
+                    <div style="display: flex; justify-content: space-between; align-items: center; margin-bottom: 0.5rem;">
+                        <strong>AI Integration</strong>
+                        <span>1 holding (9.1%)</span>
+                    </div>
+                    <div class="progress-bar">
+                        <div class="progress-fill" style="width: 9.1%; background: linear-gradient(90deg, #1abc9c, #16a085);">9.1%</div>
+                    </div>
+                </div>
+            </div>
+            <div class="success-box mt-3">
+                <strong>Concentration Status:</strong> All sectors are well within the 30% limit. Renewable Energy at 27.3% is the largest but still compliant.
+            </div>
+        </div>
+
+        <!-- Sector Details -->
+        <div class="grid grid-2">
+            <div class="card">
+                <h2>Energy Sectors (Combined: 45.5%)</h2>
+                <div class="info-box">
+                    <strong>5 holdings</strong> across renewable and nuclear energy
+                </div>
+
+                <h3 class="mt-3">Renewable Energy (27.3%)</h3>
+                <ul class="styled-list">
+                    <li>
+                        <span>Siemens Energy (SIEGY)</span>
+                        <span>$4,500</span>
+                    </li>
+                    <li>
+                        <span>Constellation Energy (CEG)</span>
+                        <span>$5,400</span>
+                    </li>
+                    <li>
+                        <span>Applied Digital (APLD)</span>
+                        <span>$5,400</span>
+                    </li>
+                </ul>
+
+                <h3 class="mt-3">Nuclear Energy (18.2%)</h3>
+                <ul class="styled-list">
+                    <li>
+                        <span>Constellation Energy (CEG)</span>
+                        <span>$5,400</span>
+                    </li>
+                    <li>
+                        <span>Oklo (OKLO)</span>
+                        <span>$2,700</span>
+                    </li>
+                </ul>
+                <div class="warning-box mt-3">
+                    <strong>Note:</strong> Constellation Energy appears in both categories (utilities with nuclear & renewable power)
+                </div>
+            </div>
+
+            <div class="card">
+                <h2>Technology Sectors (Combined: 36.4%)</h2>
+                <div class="info-box">
+                    <strong>4 holdings</strong> across various tech subsectors
+                </div>
+
+                <h3 class="mt-3">Holdings Breakdown</h3>
+                <ul class="styled-list">
+                    <li>
+                        <span>Data Centers (APLD)</span>
+                        <span>9.1%</span>
+                    </li>
+                    <li>
+                        <span>Quantum Computing (RGTI)</span>
+                        <span>9.1%</span>
+                    </li>
+                    <li>
+                        <span>Software (MSFT)</span>
+                        <span>9.1%</span>
+                    </li>
+                    <li>
+                        <span>AI Integration (GOOGL)</span>
+                        <span>9.1%</span>
+                    </li>
+                </ul>
+                <div class="success-box mt-3">
+                    <strong>Diversification:</strong> Well-distributed across different tech subsectors, avoiding over-concentration
+                </div>
+            </div>
+        </div>
+
+        <!-- Sector Risk Analysis -->
+        <div class="card">
+            <h2>Sector Risk Profile</h2>
+            <div class="table-container">
+                <table>
+                    <thead>
+                        <tr>
+                            <th>Sector</th>
+                            <th>Holdings</th>
+                            <th>Risk Profile</th>
+                            <th>Key Characteristics</th>
+                        </tr>
+                    </thead>
+                    <tbody>
+                        <tr>
+                            <td><strong>Renewable Energy</strong></td>
+                            <td>3</td>
+                            <td><span class="badge medium-risk">Medium</span></td>
+                            <td>Growth sector, policy-dependent, infrastructure plays</td>
+                        </tr>
+                        <tr>
+                            <td><strong>Nuclear Energy</strong></td>
+                            <td>2</td>
+                            <td><span class="badge medium-risk">Mixed</span></td>
+                            <td>CEG (low risk utility), OKLO (very high risk startup)</td>
+                        </tr>
+                        <tr>
+                            <td><strong>Data Centers</strong></td>
+                            <td>1</td>
+                            <td><span class="badge risky">Risky</span></td>
+                            <td>AI infrastructure play, small-cap, high growth potential</td>
+                        </tr>
+                        <tr>
+                            <td><strong>Quantum Computing</strong></td>
+                            <td>1</td>
+                            <td><span class="badge very-high-risk">Very High</span></td>
+                            <td>Emerging technology, speculative, long-term bet</td>
+                        </tr>
+                        <tr>
+                            <td><strong>Software</strong></td>
+                            <td>1</td>
+                            <td><span class="badge medium-risk">Medium</span></td>
+                            <td>Microsoft - established leader, cloud growth</td>
+                        </tr>
+                        <tr>
+                            <td><strong>AI Integration</strong></td>
+                            <td>1</td>
+                            <td><span class="badge medium-risk">Medium</span></td>
+                            <td>Google - AI leader, diverse revenue streams</td>
+                        </tr>
+                    </tbody>
+                </table>
+            </div>
+        </div>
+
+        <!-- Missing Sectors & Opportunities -->
+        <div class="card">
+            <h2>Sector Coverage Analysis</h2>
+            <div class="grid grid-2">
+                <div>
+                    <h3>Current Sectors</h3>
+                    <ul class="styled-list">
+                        <li><span>Renewable Energy</span><span class="badge completed">Covered</span></li>
+                        <li><span>Nuclear Energy</span><span class="badge completed">Covered</span></li>
+                        <li><span>Data Centers</span><span class="badge completed">Covered</span></li>
+                        <li><span>Quantum Computing</span><span class="badge completed">Covered</span></li>
+                        <li><span>Software</span><span class="badge completed">Covered</span></li>
+                        <li><span>AI Integration</span><span class="badge completed">Covered</span></li>
+                        <li><span>Semiconductors</span><span class="badge completed">Covered (NVDA, INTC)</span></li>
+                        <li><span>Cloud Services</span><span class="badge completed">Covered (MSFT, GOOGL, ORCL)</span></li>
+                        <li><span>Defense</span><span class="badge completed">Covered (GD)</span></li>
+                    </ul>
+                </div>
+                <div>
+                    <h3>Potential Gaps</h3>
+                    <ul class="styled-list">
+                        <li><span>Healthcare</span><span class="badge pending">Not Covered</span></li>
+                        <li><span>Financial Services</span><span class="badge pending">Not Covered</span></li>
+                        <li><span>Consumer Goods</span><span class="badge pending">Not Covered</span></li>
+                        <li><span>Real Estate</span><span class="badge pending">Not Covered</span></li>
+                        <li><span>Telecommunications</span><span class="badge pending">Not Covered</span></li>
+                    </ul>
+                    <div class="info-box mt-3">
+                        Current portfolio is heavily focused on energy and technology sectors. Consider diversification into other sectors for broader market exposure.
+                    </div>
+                </div>
+            </div>
+        </div>
+
+        <!-- Sector Strategy Notes -->
+        <div class="card">
+            <h2>Sector Strategy Considerations</h2>
+            <div class="warning-box">
+                <strong>Important Note:</strong> Need to develop a more nuanced sector strategy
+            </div>
+            <div class="grid grid-2 mt-3">
+                <div>
+                    <h3>Current Approach</h3>
+                    <ul class="styled-list">
+                        <li><span>Max concentration</span><span class="fw-bold">30% per sector</span></li>
+                        <li><span>Current compliance</span><span class="badge low-risk">All within limits</span></li>
+                        <li><span>Largest sector</span><span class="fw-bold">27.3% (Renewable)</span></li>
+                    </ul>
+                </div>
+                <div>
+                    <h3>Proposed Improvements</h3>
+                    <ul class="styled-list">
+                        <li><span>Lower concentration limits</span><span class="badge pending">Consider</span></li>
+                        <li><span>Allow high-risk equities</span><span class="badge pending">Balance needed</span></li>
+                        <li><span>Break down tech sector</span><span class="badge pending">Recommended</span></li>
+                    </ul>
+                </div>
+            </div>
+            <div class="info-box mt-3">
+                <strong>Key Insight:</strong> Tech shouldn't be treated as a single sector. Break it into subsectors like Semiconductors, Cloud, AI, Software - these aren't 100% correlated and can provide better diversification while maintaining tech exposure.
+            </div>
+        </div>
+
+        <!-- Sector Correlation -->
+        <div class="card">
+            <h2>Sector Correlation Considerations</h2>
+            <p class="text-muted mb-3">Understanding how sectors move together helps manage portfolio risk</p>
+
+            <div class="grid grid-3">
+                <div>
+                    <h3>High Correlation</h3>
+                    <div class="warning-box">
+                        Sectors that tend to move together
+                    </div>
+                    <ul class="styled-list mt-2">
+                        <li><span>Renewable + Nuclear Energy</span></li>
+                        <li><span>Data Centers + AI</span></li>
+                        <li><span>Software + Cloud</span></li>
+                    </ul>
+                </div>
+                <div>
+                    <h3>Medium Correlation</h3>
+                    <div class="info-box">
+                        Some relationship but more independent
+                    </div>
+                    <ul class="styled-list mt-2">
+                        <li><span>Tech + Energy</span></li>
+                        <li><span>Semiconductors + Software</span></li>
+                        <li><span>Utilities + Defense</span></li>
+                    </ul>
+                </div>
+                <div>
+                    <h3>Low Correlation</h3>
+                    <div class="success-box">
+                        Move more independently
+                    </div>
+                    <ul class="styled-list mt-2">
+                        <li><span>Quantum + Traditional sectors</span></li>
+                        <li><span>Defense + Consumer</span></li>
+                        <li><span>Utilities + Speculative tech</span></li>
+                    </ul>
+                </div>
+            </div>
+        </div>
+    </div>
+</body>
+</html>

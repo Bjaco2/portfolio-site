@@ -1,0 +1,192 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>Stock Detail - Portfolio Manager</title>
+    <link rel="stylesheet" href="styles.css">
+    <script src="https://cdn.jsdelivr.net/npm/chart.js"></script>
+    <script src="https://cdn.jsdelivr.net/npm/luxon@3.3.0/build/global/luxon.min.js"></script>
+    <script src="https://cdn.jsdelivr.net/npm/chartjs-adapter-luxon@1.3.1/dist/chartjs-adapter-luxon.umd.min.js"></script>
+    <style>
+        .chart-container {
+            position: relative;
+            height: 400px;
+            margin: 2rem 0;
+        }
+
+        .timeframe-controls {
+            display: flex;
+            gap: 0.5rem;
+            margin-bottom: 1rem;
+            flex-wrap: wrap;
+        }
+
+        .timeframe-btn {
+            padding: 0.5rem 1rem;
+            border: 2px solid var(--border-color);
+            background: white;
+            border-radius: 4px;
+            cursor: pointer;
+            font-weight: 600;
+            transition: all 0.3s ease;
+        }
+
+        .timeframe-btn:hover {
+            background-color: var(--bg-color);
+        }
+
+        .timeframe-btn.active {
+            background: var(--secondary-color);
+            color: white;
+            border-color: var(--secondary-color);
+        }
+
+        .chart-controls {
+            display: flex;
+            justify-content: space-between;
+            align-items: center;
+            margin-bottom: 1rem;
+            flex-wrap: wrap;
+            gap: 1rem;
+        }
+
+        .toggle-switch {
+            display: inline-flex;
+            align-items: center;
+            gap: 0.5rem;
+        }
+
+        .toggle-switch input[type="checkbox"] {
+            width: 50px;
+            height: 26px;
+            position: relative;
+            -webkit-appearance: none;
+            background: #c6c6c6;
+            outline: none;
+            border-radius: 20px;
+            cursor: pointer;
+            transition: 0.5s;
+        }
+
+        .toggle-switch input:checked[type="checkbox"] {
+            background: var(--secondary-color);
+        }
+
+        .toggle-switch input[type="checkbox"]:before {
+            content: '';
+            position: absolute;
+            width: 22px;
+            height: 22px;
+            border-radius: 50%;
+            top: 2px;
+            left: 2px;
+            background: white;
+            transition: 0.5s;
+        }
+
+        .toggle-switch input:checked[type="checkbox"]:before {
+            left: 26px;
+        }
+
+        .stock-header {
+            background: linear-gradient(135deg, var(--primary-color), #34495e);
+            color: white;
+            padding: 2rem;
+            border-radius: 8px;
+            margin-bottom: 2rem;
+        }
+
+        .stock-header h1 {
+            margin-bottom: 0.5rem;
+            color: white;
+        }
+
+        .stock-header .ticker {
+            font-size: 1.5rem;
+            opacity: 0.9;
+            font-weight: 600;
+        }
+
+        .performance-metric {
+            display: flex;
+            align-items: center;
+            gap: 0.5rem;
+            margin-top: 1rem;
+        }
+
+        .performance-value {
+            font-size: 1.5rem;
+            font-weight: 700;
+        }
+
+        .performance-value.positive {
+            color: var(--success-color);
+        }
+
+        .performance-value.negative {
+            color: var(--accent-color);
+        }
+
+        .back-button {
+            display: inline-block;
+            padding: 0.75rem 1.5rem;
+            background: var(--secondary-color);
+            color: white;
+            text-decoration: none;
+            border-radius: 4px;
+            font-weight: 600;
+            transition: all 0.3s ease;
+            margin-bottom: 1rem;
+        }
+
+        .back-button:hover {
+            background: #2980b9;
+            transform: translateY(-2px);
+            box-shadow: var(--shadow-hover);
+        }
+
+        .loading {
+            text-align: center;
+            padding: 3rem;
+            color: var(--text-secondary);
+        }
+
+        .error-message {
+            background-color: #f8d7da;
+            color: #721c24;
+            padding: 1rem;
+            border-radius: 4px;
+            border-left: 4px solid var(--accent-color);
+        }
+    </style>
+</head>
+<body>
+    <nav>
+        <div class="nav-container">
+            <a href="index.html" class="nav-brand">Portfolio Manager</a>
+            <ul class="nav-links">
+                <li><a href="index.html">Dashboard</a></li>
+                <li><a href="equities.html" class="active">Equities</a></li>
+                <li><a href="allocation.html">Allocation</a></li>
+                <li><a href="guidelines.html">Guidelines</a></li>
+                <li><a href="risk.html">Risk Analysis</a></li>
+                <li><a href="rules.html">Trading Rules</a></li>
+                <li><a href="sectors.html">Sectors</a></li>
+                <li><a href="deployment.html">Deployment Plan</a></li>
+            </ul>
+        </div>
+    </nav>
+
+    <div class="container">
+        <a href="equities.html" class="back-button">← Back to Equities</a>
+
+        <div id="stockContent">
+            <div class="loading">Loading stock data...</div>
+        </div>
+    </div>
+
+    <script src="portfolio-data.js"></script>
+    <script src="stock-detail.js"></script>
+</body>
+</html>

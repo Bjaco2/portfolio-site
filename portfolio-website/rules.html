@@ -1,0 +1,381 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>Trading Rules - Portfolio Manager</title>
+    <link rel="stylesheet" href="styles.css">
+</head>
+<body>
+    <nav>
+        <div class="nav-container">
+            <a href="index.html" class="nav-brand">Portfolio Manager</a>
+            <ul class="nav-links">
+                <li><a href="index.html">Dashboard</a></li>
+                <li><a href="equities.html">Equities</a></li>
+                <li><a href="allocation.html">Allocation</a></li>
+                <li><a href="guidelines.html">Guidelines</a></li>
+                <li><a href="risk.html">Risk Analysis</a></li>
+                <li><a href="rules.html" class="active">Trading Rules</a></li>
+                <li><a href="sectors.html">Sectors</a></li>
+                <li><a href="deployment.html">Deployment Plan</a></li>
+            </ul>
+        </div>
+    </nav>
+
+    <div class="container">
+        <div class="page-header">
+            <h1>Trading Rules & Risk Controls</h1>
+            <p>Portfolio management guidelines, rebalancing rules, and risk control triggers</p>
+        </div>
+
+        <!-- Quick Reference -->
+        <div class="grid grid-3">
+            <div class="stat-box primary">
+                <div class="stat-label">Rebalancing Frequency</div>
+                <div class="stat-value">6 months</div>
+                <div class="stat-label">or ±5% drift</div>
+            </div>
+            <div class="stat-box warning">
+                <div class="stat-label">Min Cash Reserve</div>
+                <div class="stat-value">$3,000</div>
+                <div class="stat-label">Always maintained</div>
+            </div>
+            <div class="stat-box accent">
+                <div class="stat-label">Max Sector Concentration</div>
+                <div class="stat-value">30%</div>
+                <div class="stat-label">of equities</div>
+            </div>
+        </div>
+
+        <!-- Rebalancing Rules -->
+        <div class="card">
+            <h2>Rebalancing Rules</h2>
+            <div class="table-container">
+                <table>
+                    <thead>
+                        <tr>
+                            <th>Section</th>
+                            <th>Rule</th>
+                            <th>Explanation (Plain English)</th>
+                        </tr>
+                    </thead>
+                    <tbody>
+                        <tr>
+                            <td><strong>Rebalancing</strong></td>
+                            <td>Every 6 months or ±5% drift</td>
+                            <td>Adjust allocations if they stray from target; sell high, buy low</td>
+                        </tr>
+                        <tr>
+                            <td><strong>Rebalancing</strong></td>
+                            <td>Use dry powder in dips</td>
+                            <td>Deploy part of $10k reserve when markets fall ≥10%</td>
+                        </tr>
+                    </tbody>
+                </table>
+            </div>
+            <div class="success-box mt-3">
+                <strong>Rebalancing Strategy:</strong> Maintain target allocations by periodically selling outperformers and buying underperformers. This enforces "buy low, sell high" discipline.
+            </div>
+        </div>
+
+        <!-- Dry Powder Management -->
+        <div class="card">
+            <h2>Dry Powder Management</h2>
+            <div class="table-container">
+                <table>
+                    <thead>
+                        <tr>
+                            <th>Section</th>
+                            <th>Rule</th>
+                            <th>Explanation (Plain English)</th>
+                        </tr>
+                    </thead>
+                    <tbody>
+                        <tr>
+                            <td><strong>Dry Powder</strong></td>
+                            <td>Keep $3,000 cash at all times</td>
+                            <td>Ensures flexibility</td>
+                        </tr>
+                        <tr>
+                            <td><strong>Dry Powder</strong></td>
+                            <td>Use only for high-conviction buys</td>
+                            <td>Buy quality assets on sale</td>
+                        </tr>
+                    </tbody>
+                </table>
+            </div>
+            <div class="info-box mt-3">
+                <strong>Total Reserve:</strong> $10,000 dry powder, with minimum $3,000 always maintained for opportunities
+            </div>
+        </div>
+
+        <!-- Risk Controls -->
+        <div class="card">
+            <h2>Risk Controls</h2>
+            <div class="table-container">
+                <table>
+                    <thead>
+                        <tr>
+                            <th>Section</th>
+                            <th>Rule</th>
+                            <th>Explanation (Plain English)</th>
+                        </tr>
+                    </thead>
+                    <tbody>
+                        <tr>
+                            <td><strong>Risk Controls</strong></td>
+                            <td>20% loss = reassess</td>
+                            <td>Review any position down 20%; decide to hold or sell</td>
+                        </tr>
+                        <tr>
+                            <td><strong>Risk Controls</strong></td>
+                            <td>No sector >30% of equities</td>
+                            <td>Don't over-concentrate in tech or any one sector</td>
+                        </tr>
+                        <tr>
+                            <td><strong>Risk Controls</strong></td>
+                            <td>Avoid margin/leverage</td>
+                            <td>No borrowing; manage risk through balance, not debt</td>
+                        </tr>
+                    </tbody>
+                </table>
+            </div>
+            <div class="warning-box mt-3">
+                <strong>Note on Sector Strategy:</strong> Develop a more nuanced sector strategy with lower concentration to allow for high-risk equities. Tech shouldn't be treated as one sector - break into subsectors (Semiconductors, Cloud, AI, Software) that aren't 100% correlated.
+            </div>
+            <div class="info-box mt-3">
+                <strong>Action Item:</strong> Research IBKR margin policy to understand available options
+            </div>
+        </div>
+
+        <!-- Performance Review -->
+        <div class="card">
+            <h2>Performance Review</h2>
+            <div class="table-container">
+                <table>
+                    <thead>
+                        <tr>
+                            <th>Section</th>
+                            <th>Rule</th>
+                            <th>Explanation (Plain English)</th>
+                        </tr>
+                    </thead>
+                    <tbody>
+                        <tr>
+                            <td><strong>Performance Review</strong></td>
+                            <td>Compare to 55/45 index</td>
+                            <td>Benchmark your returns vs a medium-risk model</td>
+                        </tr>
+                        <tr>
+                            <td><strong>Performance Review</strong></td>
+                            <td>Track key metrics</td>
+                            <td>Watch volatility, Sharpe ratio, drawdowns, correlation</td>
+                        </tr>
+                    </tbody>
+                </table>
+            </div>
+            <div class="success-box mt-3">
+                <strong>Benchmark:</strong> Compare portfolio performance against a 55% equity / 45% bond index to assess risk-adjusted returns
+            </div>
+        </div>
+
+        <!-- Risk Category Reassessment Triggers -->
+        <div class="card">
+            <h2>Risk Category Reassessment Triggers</h2>
+            <p class="text-muted mb-3">Position-specific loss thresholds that trigger a comprehensive review</p>
+            <div class="table-container">
+                <table>
+                    <thead>
+                        <tr>
+                            <th>Risk Category</th>
+                            <th>Reassessment Trigger (%)</th>
+                            <th>Action Guideline</th>
+                        </tr>
+                    </thead>
+                    <tbody>
+                        <tr>
+                            <td><span class="badge minimal-risk">Minimal Risk</span></td>
+                            <td>-7%</td>
+                            <td>Review fundamentals immediately. Even small losses are rare; may indicate rate or macro shifts.</td>
+                        </tr>
+                        <tr>
+                            <td><span class="badge low-risk">Low Risk</span></td>
+                            <td>-10%</td>
+                            <td>Check earnings and market trends; consider trimming. Stable sectors like utilities or staples—10% drop can show weakening sentiment.</td>
+                        </tr>
+                        <tr>
+                            <td><span class="badge medium-risk">Medium Risk</span></td>
+                            <td>-15%</td>
+                            <td>Evaluate fundamentals and technicals; hold if outlook intact. Normal volatility range; reassess before reacting.</td>
+                        </tr>
+                        <tr>
+                            <td><span class="badge risky">Risky</span></td>
+                            <td>-20%</td>
+                            <td>Full position review: news, sector trends, cash flow. Deeper drops common; reassess conviction before averaging down.</td>
+                        </tr>
+                        <tr>
+                            <td><span class="badge very-high-risk">Very High Risk</span></td>
+                            <td>-30%</td>
+                            <td>Reassess viability, not just price; avoid panic selling. Extreme volatility expected; ensure fundamentals still valid.</td>
+                        </tr>
+                    </tbody>
+                </table>
+            </div>
+        </div>
+
+        <!-- Detailed Trigger Guidance -->
+        <div class="grid grid-2">
+            <div class="card">
+                <h2>Conservative Position Triggers</h2>
+
+                <h3>Minimal Risk (-7% trigger)</h3>
+                <div class="warning-box">
+                    <strong>Severity:</strong> High concern
+                </div>
+                <ul class="styled-list mt-2">
+                    <li><span>Action</span><span>Review immediately</span></li>
+                    <li><span>Reason</span><span>Rare for these assets</span></li>
+                    <li><span>Consider</span><span>Rate or macro shifts</span></li>
+                </ul>
+
+                <h3 class="mt-3">Low Risk (-10% trigger)</h3>
+                <div class="info-box">
+                    <strong>Severity:</strong> Moderate concern
+                </div>
+                <ul class="styled-list mt-2">
+                    <li><span>Action</span><span>Check earnings & trends</span></li>
+                    <li><span>Reason</span><span>May show weakness</span></li>
+                    <li><span>Consider</span><span>Trimming position</span></li>
+                </ul>
+            </div>
+
+            <div class="card">
+                <h2>Aggressive Position Triggers</h2>
+
+                <h3>Risky (-20% trigger)</h3>
+                <div class="warning-box">
+                    <strong>Severity:</strong> Expected volatility
+                </div>
+                <ul class="styled-list mt-2">
+                    <li><span>Action</span><span>Full review: news, trends, cash flow</span></li>
+                    <li><span>Reason</span><span>Deeper drops common</span></li>
+                    <li><span>Consider</span><span>Reassess conviction first</span></li>
+                </ul>
+
+                <h3 class="mt-3">Very High Risk (-30% trigger)</h3>
+                <div class="warning-box">
+                    <strong>Severity:</strong> Normal for asset class
+                </div>
+                <ul class="styled-list mt-2">
+                    <li><span>Action</span><span>Reassess viability, not price</span></li>
+                    <li><span>Reason</span><span>Extreme volatility expected</span></li>
+                    <li><span>Consider</span><span>Avoid panic selling</span></li>
+                </ul>
+            </div>
+        </div>
+
+        <!-- Medium Risk Detailed Guidance -->
+        <div class="card">
+            <h2>Medium Risk Position Management (-15% trigger)</h2>
+            <div class="success-box">
+                <strong>Portfolio Core:</strong> These positions represent 40% of the portfolio and deserve careful analysis
+            </div>
+            <div class="grid grid-2 mt-3">
+                <div>
+                    <h3>When Triggered</h3>
+                    <ul class="styled-list">
+                        <li><span>Step 1</span><span>Evaluate fundamentals</span></li>
+                        <li><span>Step 2</span><span>Review technicals</span></li>
+                        <li><span>Step 3</span><span>Assess market conditions</span></li>
+                        <li><span>Step 4</span><span>Check sector trends</span></li>
+                    </ul>
+                </div>
+                <div>
+                    <h3>Decision Framework</h3>
+                    <ul class="styled-list">
+                        <li><span>Hold if</span><span>Outlook remains intact</span></li>
+                        <li><span>Consider</span><span>Normal volatility range</span></li>
+                        <li><span>Avoid</span><span>Knee-jerk reactions</span></li>
+                        <li><span>Remember</span><span>15% is expected sometimes</span></li>
+                    </ul>
+                </div>
+            </div>
+        </div>
+
+        <!-- Key Metrics to Track -->
+        <div class="card">
+            <h2>Key Performance Metrics</h2>
+            <div class="grid grid-2">
+                <div>
+                    <h3>Portfolio-Level Metrics</h3>
+                    <ul class="styled-list">
+                        <li>
+                            <span>Volatility</span>
+                            <span class="badge medium-risk">Track</span>
+                        </li>
+                        <li>
+                            <span>Sharpe Ratio</span>
+                            <span class="badge medium-risk">Track</span>
+                        </li>
+                        <li>
+                            <span>Drawdowns</span>
+                            <span class="badge medium-risk">Track</span>
+                        </li>
+                        <li>
+                            <span>Correlation</span>
+                            <span class="badge medium-risk">Track</span>
+                        </li>
+                    </ul>
+                </div>
+                <div>
+                    <h3>Benchmark Comparison</h3>
+                    <ul class="styled-list">
+                        <li>
+                            <span>55/45 Index</span>
+                            <span class="badge medium-risk">Primary</span>
+                        </li>
+                        <li>
+                            <span>Total Return</span>
+                            <span class="badge medium-risk">Monitor</span>
+                        </li>
+                        <li>
+                            <span>Risk-Adjusted Return</span>
+                            <span class="badge medium-risk">Monitor</span>
+                        </li>
+                        <li>
+                            <span>Max Drawdown</span>
+                            <span class="badge medium-risk">Monitor</span>
+                        </li>
+                    </ul>
+                </div>
+            </div>
+        </div>
+
+        <!-- Summary of All Rules -->
+        <div class="card">
+            <h2>Quick Reference: All Trading Rules</h2>
+            <div class="grid grid-2">
+                <div>
+                    <h3>Portfolio Management</h3>
+                    <ul class="styled-list">
+                        <li><span>Rebalance every</span><span class="fw-bold">6 months or ±5% drift</span></li>
+                        <li><span>Min cash reserve</span><span class="fw-bold">$3,000</span></li>
+                        <li><span>Max position size</span><span class="fw-bold">6% ($5,400)</span></li>
+                        <li><span>Max sector concentration</span><span class="fw-bold">30% of equities</span></li>
+                    </ul>
+                </div>
+                <div>
+                    <h3>Risk Management</h3>
+                    <ul class="styled-list">
+                        <li><span>No margin/leverage</span><span class="badge low-risk">Required</span></li>
+                        <li><span>20% loss review</span><span class="badge medium-risk">Mandatory</span></li>
+                        <li><span>Deploy dry powder at</span><span class="fw-bold">≥10% market drop</span></li>
+                        <li><span>High-conviction only</span><span class="badge medium-risk">Required</span></li>
+                    </ul>
+                </div>
+            </div>
+        </div>
+    </div>
+</body>
+</html>

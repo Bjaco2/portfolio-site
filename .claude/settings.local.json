@@ -1,0 +1,15 @@
+{
+  "permissions": {
+    "allow": [
+      "Read(//Users/bowenjacobs/Downloads/**)",
+      "Bash(mkdir:*)",
+      "Bash(python3:*)",
+      "Bash(open http://localhost:8000)",
+      "Bash(open http://localhost:8000/equities-enhanced.html)",
+      "Bash(git init:*)",
+      "Bash(git add:*)"
+    ],
+    "deny": [],
+    "ask": []
+  }
+}

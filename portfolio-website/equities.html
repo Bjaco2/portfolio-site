@@ -1,0 +1,332 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>Equity Holdings - Portfolio Manager</title>
+    <link rel="stylesheet" href="styles.css">
+    <script>
+        // Redirect to enhanced version
+        window.location.href = 'equities-enhanced.html';
+    </script>
+</head>
+<body>
+    <nav>
+        <div class="nav-container">
+            <a href="index.html" class="nav-brand">Portfolio Manager</a>
+            <ul class="nav-links">
+                <li><a href="index.html">Dashboard</a></li>
+                <li><a href="equities-enhanced.html" class="active">Equities</a></li>
+                <li><a href="allocation.html">Allocation</a></li>
+                <li><a href="guidelines.html">Guidelines</a></li>
+                <li><a href="risk.html">Risk Analysis</a></li>
+                <li><a href="rules.html">Trading Rules</a></li>
+                <li><a href="sectors.html">Sectors</a></li>
+                <li><a href="deployment.html">Deployment Plan</a></li>
+            </ul>
+        </div>
+    </nav>
+
+    <div class="container">
+        <div class="page-header">
+            <h1>Equity Holdings</h1>
+            <p>Detailed breakdown of stock positions - $45,000 total (50% of portfolio)</p>
+        </div>
+
+        <!-- Summary Stats -->
+        <div class="grid grid-4">
+            <div class="stat-box success">
+                <div class="stat-label">Total Equities</div>
+                <div class="stat-value">$45,000</div>
+            </div>
+            <div class="stat-box primary">
+                <div class="stat-label">Number of Holdings</div>
+                <div class="stat-value">11</div>
+            </div>
+            <div class="stat-box warning">
+                <div class="stat-label">% of Portfolio</div>
+                <div class="stat-value">50%</div>
+            </div>
+            <div class="stat-box accent">
+                <div class="stat-label">% of Total Investments</div>
+                <div class="stat-value">100%</div>
+            </div>
+        </div>
+
+        <!-- Holdings Table -->
+        <div class="card">
+            <h2>Stock Holdings</h2>
+            <div class="table-container">
+                <table>
+                    <thead>
+                        <tr>
+                            <th>Stock Name</th>
+                            <th>Ticker</th>
+                            <th>Amount Invested</th>
+                            <th>% of Portfolio</th>
+                            <th>% of Equities</th>
+                            <th>Sector</th>
+                            <th>Market Cap</th>
+                            <th>Volume</th>
+                            <th>Risk Category</th>
+                            <th>Transaction Complete?</th>
+                        </tr>
+                    </thead>
+                    <tbody>
+                        <tr>
+                            <td><strong>Applied Digital</strong></td>
+                            <td>APLD</td>
+                            <td>$5,400.00</td>
+                            <td>6.00%</td>
+                            <td>12.00%</td>
+                            <td>Data Centers/ AI Power/ Renewable Energy</td>
+                            <td>≈$850M</td>
+                            <td>≈3.5M shares/day</td>
+                            <td><span class="badge risky">Risky</span></td>
+                            <td><span class="badge completed">Yes</span></td>
+                        </tr>
+                        <tr>
+                            <td><strong>NVIDIA</strong></td>
+                            <td>NVDA</td>
+                            <td>$5,400.00</td>
+                            <td>6.00%</td>
+                            <td>12.00%</td>
+                            <td>Semiconductors / AI Power</td>
+                            <td>≈$2.7T</td>
+                            <td>≈45M shares/day</td>
+                            <td><span class="badge medium-risk">Medium Risk</span></td>
+                            <td><span class="badge pending">No</span></td>
+                        </tr>
+                        <tr>
+                            <td><strong>Rigetti Computing</strong></td>
+                            <td>RGTI</td>
+                            <td>$2,700.00</td>
+                            <td>3.00%</td>
+                            <td>6.00%</td>
+                            <td>Quantum Computing</td>
+                            <td>≈$250M</td>
+                            <td>≈1.5M shares/day</td>
+                            <td><span class="badge very-high-risk">Very High Risk</span></td>
+                            <td><span class="badge pending">No</span></td>
+                        </tr>
+                        <tr>
+                            <td><strong>Alphabet (Google)</strong></td>
+                            <td>GOOGL</td>
+                            <td>$3,600.00</td>
+                            <td>4.00%</td>
+                            <td>8.00%</td>
+                            <td>AI Integration / Cloud Services</td>
+                            <td>≈$2.1T</td>
+                            <td>≈25M shares/day</td>
+                            <td><span class="badge medium-risk">Medium Risk</span></td>
+                            <td><span class="badge pending">No</span></td>
+                        </tr>
+                        <tr>
+                            <td><strong>Microsoft</strong></td>
+                            <td>MSFT</td>
+                            <td>$3,600.00</td>
+                            <td>4.00%</td>
+                            <td>8.00%</td>
+                            <td>Software / Cloud Services</td>
+                            <td>≈$3.2T</td>
+                            <td>≈22M shares/day</td>
+                            <td><span class="badge medium-risk">Medium Risk</span></td>
+                            <td><span class="badge completed">Yes</span></td>
+                        </tr>
+                        <tr>
+                            <td><strong>Siemens Energy</strong></td>
+                            <td>SIEGY</td>
+                            <td>$4,500.00</td>
+                            <td>5.00%</td>
+                            <td>10.00%</td>
+                            <td>Energy / Industrial Technology / Renewables</td>
+                            <td>≈$25B</td>
+                            <td>≈1.2M shares/day</td>
+                            <td><span class="badge medium-risk">Medium Risk</span></td>
+                            <td><span class="badge pending">No</span></td>
+                        </tr>
+                        <tr>
+                            <td><strong>Oklo</strong></td>
+                            <td>OKLO</td>
+                            <td>$2,700.00</td>
+                            <td>3.00%</td>
+                            <td>6.00%</td>
+                            <td>Nuclear Energy / Advanced Reactors</td>
+                            <td>≈$350M</td>
+                            <td>≈800K shares/day</td>
+                            <td><span class="badge very-high-risk">Very High Risk</span></td>
+                            <td><span class="badge pending">No</span></td>
+                        </tr>
+                        <tr>
+                            <td><strong>Constellation Energy</strong></td>
+                            <td>CEG</td>
+                            <td>$5,400.00</td>
+                            <td>6.00%</td>
+                            <td>12.00%</td>
+                            <td>Utilities / Nuclear & Renewable Power</td>
+                            <td>≈$70B</td>
+                            <td>≈2.4M shares/day</td>
+                            <td><span class="badge low-risk">Low Risk</span></td>
+                            <td><span class="badge pending">No</span></td>
+                        </tr>
+                        <tr>
+                            <td><strong>General Dynamics</strong></td>
+                            <td>GD</td>
+                            <td>$4,500.00</td>
+                            <td>5.00%</td>
+                            <td>10.00%</td>
+                            <td>Aerospace & Defense / Government Contracting</td>
+                            <td>≈$80B</td>
+                            <td>≈1.1M shares/day</td>
+                            <td><span class="badge medium-risk">Medium Risk</span></td>
+                            <td><span class="badge pending">No</span></td>
+                        </tr>
+                        <tr>
+                            <td><strong>Intel</strong></td>
+                            <td>INTC</td>
+                            <td>$2,700.00</td>
+                            <td>3.00%</td>
+                            <td>6.00%</td>
+                            <td>Semiconductors / Manufacturing / AI Hardware</td>
+                            <td>≈$170B</td>
+                            <td>≈38M shares/day</td>
+                            <td><span class="badge medium-risk">Medium Risk</span></td>
+                            <td><span class="badge pending">No</span></td>
+                        </tr>
+                        <tr>
+                            <td><strong>Oracle</strong></td>
+                            <td>ORCL</td>
+                            <td>$4,500.00</td>
+                            <td>5.00%</td>
+                            <td>10.00%</td>
+                            <td>Cloud Computing / Enterprise Software / AI Databases</td>
+                            <td>≈$380B</td>
+                            <td>≈8M shares/day</td>
+                            <td><span class="badge medium-risk">Medium Risk</span></td>
+                            <td><span class="badge pending">No</span></td>
+                        </tr>
+                        <tr class="table-footer">
+                            <td colspan="2"><strong>Totals:</strong></td>
+                            <td><strong>$45,000.00</strong></td>
+                            <td><strong>50.00%</strong></td>
+                            <td><strong>100.00%</strong></td>
+                            <td colspan="5"></td>
+                        </tr>
+                    </tbody>
+                </table>
+            </div>
+        </div>
+
+        <!-- Holdings Analysis -->
+        <div class="grid grid-2">
+            <div class="card">
+                <h2>Holdings by Risk Category</h2>
+                <div class="styled-list">
+                    <li>
+                        <span><span class="badge very-high-risk">Very High Risk</span> (2 stocks)</span>
+                        <span class="fw-bold">$5,400</span>
+                    </li>
+                    <li>
+                        <span><span class="badge risky">Risky</span> (1 stock)</span>
+                        <span class="fw-bold">$5,400</span>
+                    </li>
+                    <li>
+                        <span><span class="badge medium-risk">Medium Risk</span> (7 stocks)</span>
+                        <span class="fw-bold">$31,500</span>
+                    </li>
+                    <li>
+                        <span><span class="badge low-risk">Low Risk</span> (1 stock)</span>
+                        <span class="fw-bold">$5,400</span>
+                    </li>
+                </div>
+            </div>
+
+            <div class="card">
+                <h2>Transaction Status</h2>
+                <div class="styled-list">
+                    <li>
+                        <span><span class="badge completed">Completed</span></span>
+                        <span class="fw-bold">2 transactions</span>
+                    </li>
+                    <li>
+                        <span>Applied Digital (APLD)</span>
+                        <span>$5,400</span>
+                    </li>
+                    <li>
+                        <span>Microsoft (MSFT)</span>
+                        <span>$3,600</span>
+                    </li>
+                </ul>
+                <div class="info-box mt-3">
+                    <strong>9 pending transactions</strong> totaling $36,000
+                </div>
+            </div>
+        </div>
+
+        <!-- Largest Holdings -->
+        <div class="card">
+            <h2>Top 5 Holdings (by dollar amount)</h2>
+            <div class="grid grid-3">
+                <div class="stat-box" style="background: linear-gradient(135deg, #3498db, #5dade2);">
+                    <div class="stat-label">Applied Digital (APLD)</div>
+                    <div class="stat-value">$5,400</div>
+                    <div class="stat-label">12% of equities</div>
+                </div>
+                <div class="stat-box" style="background: linear-gradient(135deg, #3498db, #5dade2);">
+                    <div class="stat-label">NVIDIA (NVDA)</div>
+                    <div class="stat-value">$5,400</div>
+                    <div class="stat-label">12% of equities</div>
+                </div>
+                <div class="stat-box" style="background: linear-gradient(135deg, #3498db, #5dade2);">
+                    <div class="stat-label">Constellation Energy (CEG)</div>
+                    <div class="stat-value">$5,400</div>
+                    <div class="stat-label">12% of equities</div>
+                </div>
+                <div class="stat-box" style="background: linear-gradient(135deg, #27ae60, #2ecc71);">
+                    <div class="stat-label">Siemens Energy (SIEGY)</div>
+                    <div class="stat-value">$4,500</div>
+                    <div class="stat-label">10% of equities</div>
+                </div>
+                <div class="stat-box" style="background: linear-gradient(135deg, #27ae60, #2ecc71);">
+                    <div class="stat-label">General Dynamics (GD)</div>
+                    <div class="stat-value">$4,500</div>
+                    <div class="stat-label">10% of equities</div>
+                </div>
+            </div>
+        </div>
+
+        <!-- Market Cap Distribution -->
+        <div class="card">
+            <h2>Market Cap Distribution</h2>
+            <div class="grid grid-3">
+                <div>
+                    <h3>Large Cap (&gt;$200B)</h3>
+                    <ul class="styled-list">
+                        <li><span>NVIDIA</span><span>$2.7T</span></li>
+                        <li><span>Microsoft</span><span>$3.2T</span></li>
+                        <li><span>Alphabet</span><span>$2.1T</span></li>
+                        <li><span>Oracle</span><span>$380B</span></li>
+                    </ul>
+                </div>
+                <div>
+                    <h3>Mid Cap ($2B-$200B)</h3>
+                    <ul class="styled-list">
+                        <li><span>General Dynamics</span><span>$80B</span></li>
+                        <li><span>Constellation Energy</span><span>$70B</span></li>
+                        <li><span>Siemens Energy</span><span>$25B</span></li>
+                        <li><span>Intel</span><span>$170B</span></li>
+                    </ul>
+                </div>
+                <div>
+                    <h3>Small Cap (&lt;$2B)</h3>
+                    <ul class="styled-list">
+                        <li><span>Applied Digital</span><span>$850M</span></li>
+                        <li><span>Oklo</span><span>$350M</span></li>
+                        <li><span>Rigetti Computing</span><span>$250M</span></li>
+                    </ul>
+                </div>
+            </div>
+        </div>
+    </div>
+</body>
+</html>

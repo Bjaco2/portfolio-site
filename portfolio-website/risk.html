@@ -1,0 +1,328 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>Risk Allocation - Portfolio Manager</title>
+    <link rel="stylesheet" href="styles.css">
+</head>
+<body>
+    <nav>
+        <div class="nav-container">
+            <a href="index.html" class="nav-brand">Portfolio Manager</a>
+            <ul class="nav-links">
+                <li><a href="index.html">Dashboard</a></li>
+                <li><a href="equities.html">Equities</a></li>
+                <li><a href="allocation.html">Allocation</a></li>
+                <li><a href="guidelines.html">Guidelines</a></li>
+                <li><a href="risk.html" class="active">Risk Analysis</a></li>
+                <li><a href="rules.html">Trading Rules</a></li>
+                <li><a href="sectors.html">Sectors</a></li>
+                <li><a href="deployment.html">Deployment Plan</a></li>
+            </ul>
+        </div>
+    </nav>
+
+    <div class="container">
+        <div class="page-header">
+            <h1>Risk Allocation Analysis</h1>
+            <p>Portfolio distribution by risk category - $90,000 active portfolio</p>
+        </div>
+
+        <!-- Risk Summary -->
+        <div class="grid grid-3">
+            <div class="stat-box primary">
+                <div class="stat-label">Active Portfolio</div>
+                <div class="stat-value">$90,000</div>
+                <div class="stat-label">100% allocated</div>
+            </div>
+            <div class="stat-box warning">
+                <div class="stat-label">Medium Risk Allocation</div>
+                <div class="stat-value">$36,000</div>
+                <div class="stat-label">40% of portfolio</div>
+            </div>
+            <div class="stat-box success">
+                <div class="stat-label">Low + Minimal Risk</div>
+                <div class="stat-value">$31,500</div>
+                <div class="stat-label">35% of portfolio</div>
+            </div>
+        </div>
+
+        <!-- Risk Allocation Table -->
+        <div class="card">
+            <h2>Risk Category Allocation</h2>
+            <div class="table-container">
+                <table>
+                    <thead>
+                        <tr>
+                            <th>Risk Category</th>
+                            <th>% Allocation</th>
+                            <th>Dollar Amount</th>
+                            <th>Description / Example</th>
+                        </tr>
+                    </thead>
+                    <tbody>
+                        <tr>
+                            <td><span class="badge minimal-risk">Minimal Risk</span></td>
+                            <td>10%</td>
+                            <td><strong>$9,000</strong></td>
+                            <td>Cash-like instruments or short-term Treasuries</td>
+                        </tr>
+                        <tr>
+                            <td><span class="badge low-risk">Low Risk</span></td>
+                            <td>25%</td>
+                            <td><strong>$22,500</strong></td>
+                            <td>Investment-grade bonds, short-duration ETFs, gold</td>
+                        </tr>
+                        <tr>
+                            <td><span class="badge medium-risk">Medium Risk</span></td>
+                            <td>40%</td>
+                            <td><strong>$36,000</strong></td>
+                            <td>Blue-chip equities, balanced bond funds</td>
+                        </tr>
+                        <tr>
+                            <td><span class="badge risky">Risky</span></td>
+                            <td>15%</td>
+                            <td><strong>$13,500</strong></td>
+                            <td>Mid/small-cap stocks, selective high-yield debt</td>
+                        </tr>
+                        <tr>
+                            <td><span class="badge very-high-risk">Very High Risk</span></td>
+                            <td>10%</td>
+                            <td><strong>$9,000</strong></td>
+                            <td>Crypto, speculative equities</td>
+                        </tr>
+                        <tr class="table-footer">
+                            <td><strong>Total Active Portfolio</strong></td>
+                            <td><strong>100%</strong></td>
+                            <td><strong>$90,000</strong></td>
+                            <td><strong>—</strong></td>
+                        </tr>
+                    </tbody>
+                </table>
+            </div>
+        </div>
+
+        <!-- Visual Risk Distribution -->
+        <div class="card">
+            <h2>Risk Distribution Visualization</h2>
+            <div style="margin-top: 1.5rem;">
+                <div class="mb-3">
+                    <div style="display: flex; justify-content: space-between; align-items: center; margin-bottom: 0.5rem;">
+                        <strong>Minimal Risk (10%)</strong>
+                        <span>$9,000</span>
+                    </div>
+                    <div class="progress-bar">
+                        <div class="progress-fill" style="width: 10%; background: linear-gradient(90deg, #d1ecf1, #bee5eb); color: #0c5460;">10%</div>
+                    </div>
+                </div>
+                <div class="mb-3">
+                    <div style="display: flex; justify-content: space-between; align-items: center; margin-bottom: 0.5rem;">
+                        <strong>Low Risk (25%)</strong>
+                        <span>$22,500</span>
+                    </div>
+                    <div class="progress-bar">
+                        <div class="progress-fill" style="width: 25%; background: linear-gradient(90deg, #27ae60, #2ecc71);">25%</div>
+                    </div>
+                </div>
+                <div class="mb-3">
+                    <div style="display: flex; justify-content: space-between; align-items: center; margin-bottom: 0.5rem;">
+                        <strong>Medium Risk (40%)</strong>
+                        <span>$36,000</span>
+                    </div>
+                    <div class="progress-bar">
+                        <div class="progress-fill" style="width: 40%; background: linear-gradient(90deg, #f39c12, #f1c40f); color: #856404;">40%</div>
+                    </div>
+                </div>
+                <div class="mb-3">
+                    <div style="display: flex; justify-content: space-between; align-items: center; margin-bottom: 0.5rem;">
+                        <strong>Risky (15%)</strong>
+                        <span>$13,500</span>
+                    </div>
+                    <div class="progress-bar">
+                        <div class="progress-fill" style="width: 15%; background: linear-gradient(90deg, #f8d7da, #f5c6cb); color: #721c24;">15%</div>
+                    </div>
+                </div>
+                <div class="mb-3">
+                    <div style="display: flex; justify-content: space-between; align-items: center; margin-bottom: 0.5rem;">
+                        <strong>Very High Risk (10%)</strong>
+                        <span>$9,000</span>
+                    </div>
+                    <div class="progress-bar">
+                        <div class="progress-fill" style="width: 10%; background: linear-gradient(90deg, #721c24, #5a1319);">10%</div>
+                    </div>
+                </div>
+            </div>
+        </div>
+
+        <!-- Risk Categories Detail -->
+        <div class="grid grid-2">
+            <div class="card">
+                <h2>Conservative Allocation (35%)</h2>
+                <div class="success-box">
+                    <strong>Total: $31,500</strong> - Minimal + Low Risk
+                </div>
+
+                <h3 class="mt-3">Minimal Risk - $9,000 (10%)</h3>
+                <ul class="styled-list">
+                    <li><span>Type</span><span class="badge minimal-risk">Safest</span></li>
+                    <li><span>Examples</span><span>Short-term Treasuries</span></li>
+                    <li><span>Purpose</span><span>Capital preservation</span></li>
+                </ul>
+
+                <h3 class="mt-3">Low Risk - $22,500 (25%)</h3>
+                <ul class="styled-list">
+                    <li><span>Type</span><span class="badge low-risk">Stable</span></li>
+                    <li><span>Examples</span><span>Investment-grade bonds, Gold</span></li>
+                    <li><span>Purpose</span><span>Stability & income</span></li>
+                </ul>
+            </div>
+
+            <div class="card">
+                <h2>Growth Allocation (40%)</h2>
+                <div class="info-box">
+                    <strong>Total: $36,000</strong> - Medium Risk (Core Holdings)
+                </div>
+
+                <h3 class="mt-3">Medium Risk - $36,000 (40%)</h3>
+                <ul class="styled-list">
+                    <li><span>Type</span><span class="badge medium-risk">Balanced</span></li>
+                    <li><span>Examples</span><span>Blue-chip stocks, Balanced funds</span></li>
+                    <li><span>Purpose</span><span>Primary growth engine</span></li>
+                    <li><span>Current Holdings</span><span>7 equity positions</span></li>
+                </ul>
+                <div class="info-box mt-3">
+                    Largest allocation - represents core portfolio strategy focused on quality companies with strong fundamentals
+                </div>
+            </div>
+
+            <div class="card">
+                <h2>Aggressive Allocation (25%)</h2>
+                <div class="warning-box">
+                    <strong>Total: $22,500</strong> - Risky + Very High Risk
+                </div>
+
+                <h3 class="mt-3">Risky - $13,500 (15%)</h3>
+                <ul class="styled-list">
+                    <li><span>Type</span><span class="badge risky">Aggressive</span></li>
+                    <li><span>Examples</span><span>Mid/small-cap stocks</span></li>
+                    <li><span>Purpose</span><span>Enhanced growth potential</span></li>
+                    <li><span>Current Holdings</span><span>1 equity position (APLD)</span></li>
+                </ul>
+
+                <h3 class="mt-3">Very High Risk - $9,000 (10%)</h3>
+                <ul class="styled-list">
+                    <li><span>Type</span><span class="badge very-high-risk">Speculative</span></li>
+                    <li><span>Examples</span><span>Crypto, speculative stocks</span></li>
+                    <li><span>Purpose</span><span>High upside potential</span></li>
+                    <li><span>Current Holdings</span><span>2 equity positions</span></li>
+                </ul>
+            </div>
+
+            <div class="card">
+                <h2>Risk Distribution Summary</h2>
+                <div class="stat-box" style="background: linear-gradient(135deg, #d4edda, #c3e6cb);">
+                    <div class="stat-label" style="color: #155724;">Conservative (Minimal + Low)</div>
+                    <div class="stat-value" style="color: #155724;">35%</div>
+                    <div class="stat-label" style="color: #155724;">$31,500</div>
+                </div>
+                <div class="stat-box mt-2" style="background: linear-gradient(135deg, #fff3cd, #ffeaa7);">
+                    <div class="stat-label" style="color: #856404;">Growth (Medium)</div>
+                    <div class="stat-value" style="color: #856404;">40%</div>
+                    <div class="stat-label" style="color: #856404;">$36,000</div>
+                </div>
+                <div class="stat-box mt-2" style="background: linear-gradient(135deg, #f8d7da, #f5c6cb);">
+                    <div class="stat-label" style="color: #721c24;">Aggressive (Risky + Very High)</div>
+                    <div class="stat-value" style="color: #721c24;">25%</div>
+                    <div class="stat-label" style="color: #721c24;">$22,500</div>
+                </div>
+            </div>
+        </div>
+
+        <!-- Current Equity Risk Breakdown -->
+        <div class="card">
+            <h2>Current Equity Holdings by Risk Category</h2>
+            <p class="text-muted mb-3">Based on 11 current stock positions totaling $45,000</p>
+            <div class="table-container">
+                <table>
+                    <thead>
+                        <tr>
+                            <th>Risk Category</th>
+                            <th># of Stocks</th>
+                            <th>Total Value</th>
+                            <th>% of Equities</th>
+                            <th>Stock Examples</th>
+                        </tr>
+                    </thead>
+                    <tbody>
+                        <tr>
+                            <td><span class="badge very-high-risk">Very High Risk</span></td>
+                            <td>2</td>
+                            <td>$5,400</td>
+                            <td>12%</td>
+                            <td>Rigetti Computing (RGTI), Oklo (OKLO)</td>
+                        </tr>
+                        <tr>
+                            <td><span class="badge risky">Risky</span></td>
+                            <td>1</td>
+                            <td>$5,400</td>
+                            <td>12%</td>
+                            <td>Applied Digital (APLD)</td>
+                        </tr>
+                        <tr>
+                            <td><span class="badge medium-risk">Medium Risk</span></td>
+                            <td>7</td>
+                            <td>$31,500</td>
+                            <td>70%</td>
+                            <td>NVDA, GOOGL, MSFT, SIEGY, GD, INTC, ORCL</td>
+                        </tr>
+                        <tr>
+                            <td><span class="badge low-risk">Low Risk</span></td>
+                            <td>1</td>
+                            <td>$5,400</td>
+                            <td>12%</td>
+                            <td>Constellation Energy (CEG)</td>
+                        </tr>
+                        <tr class="table-footer">
+                            <td><strong>Total</strong></td>
+                            <td><strong>11</strong></td>
+                            <td><strong>$45,000</strong></td>
+                            <td><strong>100%</strong></td>
+                            <td></td>
+                        </tr>
+                    </tbody>
+                </table>
+            </div>
+            <div class="info-box mt-3">
+                Current equity allocation leans heavily toward Medium Risk (70%), providing a balanced approach to growth with moderate volatility
+            </div>
+        </div>
+
+        <!-- Portfolio Risk Profile -->
+        <div class="card">
+            <h2>Overall Portfolio Risk Profile</h2>
+            <div class="grid grid-3">
+                <div class="stat-box" style="background: linear-gradient(135deg, #d4edda, #c3e6cb);">
+                    <div class="stat-label" style="color: #155724;">Conservative Assets</div>
+                    <div class="stat-value" style="color: #155724;">35%</div>
+                    <div class="stat-label" style="color: #155724;">Foundation & Stability</div>
+                </div>
+                <div class="stat-box" style="background: linear-gradient(135deg, #fff3cd, #ffeaa7);">
+                    <div class="stat-label" style="color: #856404;">Moderate Risk Assets</div>
+                    <div class="stat-value" style="color: #856404;">40%</div>
+                    <div class="stat-label" style="color: #856404;">Core Growth Engine</div>
+                </div>
+                <div class="stat-box" style="background: linear-gradient(135deg, #f8d7da, #f5c6cb);">
+                    <div class="stat-label" style="color: #721c24;">High Risk Assets</div>
+                    <div class="stat-value" style="color: #721c24;">25%</div>
+                    <div class="stat-label" style="color: #721c24;">Enhanced Returns</div>
+                </div>
+            </div>
+            <div class="success-box mt-3">
+                <strong>Portfolio Classification: Medium Risk</strong>
+                <p class="mt-2" style="margin-bottom: 0;">This allocation balances growth potential with downside protection. The 40% medium risk core provides stability, while 35% conservative holdings offer a safety buffer and 25% aggressive positions provide upside potential.</p>
+            </div>
+        </div>
+    </div>
+</body>
+</html>

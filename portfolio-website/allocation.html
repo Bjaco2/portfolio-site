@@ -1,0 +1,345 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>Portfolio Allocation - Portfolio Manager</title>
+    <link rel="stylesheet" href="styles.css">
+</head>
+<body>
+    <nav>
+        <div class="nav-container">
+            <a href="index.html" class="nav-brand">Portfolio Manager</a>
+            <ul class="nav-links">
+                <li><a href="index.html">Dashboard</a></li>
+                <li><a href="equities.html">Equities</a></li>
+                <li><a href="allocation.html" class="active">Allocation</a></li>
+                <li><a href="guidelines.html">Guidelines</a></li>
+                <li><a href="risk.html">Risk Analysis</a></li>
+                <li><a href="rules.html">Trading Rules</a></li>
+                <li><a href="sectors.html">Sectors</a></li>
+                <li><a href="deployment.html">Deployment Plan</a></li>
+            </ul>
+        </div>
+    </nav>
+
+    <div class="container">
+        <div class="page-header">
+            <h1>Portfolio Allocation</h1>
+            <p>Strategic distribution of $100,000 capital across asset classes</p>
+        </div>
+
+        <!-- Capital Overview -->
+        <div class="grid grid-3">
+            <div class="stat-box primary">
+                <div class="stat-label">Total Capital</div>
+                <div class="stat-value">$100,000</div>
+            </div>
+            <div class="stat-box success">
+                <div class="stat-label">Total Invested</div>
+                <div class="stat-value">$90,000</div>
+                <div class="stat-label">90% deployed</div>
+            </div>
+            <div class="stat-box warning">
+                <div class="stat-label">Dry Powder (Cash)</div>
+                <div class="stat-value">$10,000</div>
+                <div class="stat-label">10% reserve</div>
+            </div>
+        </div>
+
+        <!-- Target Allocation Table -->
+        <div class="card">
+            <h2>Target Asset Allocation</h2>
+            <div class="table-container">
+                <table>
+                    <thead>
+                        <tr>
+                            <th>Category</th>
+                            <th>Target %</th>
+                            <th>Dollar Allocation (of $90,000)</th>
+                            <th>Notes</th>
+                        </tr>
+                    </thead>
+                    <tbody>
+                        <tr>
+                            <td><strong>Equities</strong></td>
+                            <td>50.00%</td>
+                            <td>$45,000</td>
+                            <td>Core growth engine</td>
+                        </tr>
+                        <tr>
+                            <td><strong>Bonds / Fixed Income</strong></td>
+                            <td>30.00%</td>
+                            <td>$27,000</td>
+                            <td>Stability & income</td>
+                        </tr>
+                        <tr>
+                            <td><strong>Commodities</strong></td>
+                            <td>15.00%</td>
+                            <td>$13,500</td>
+                            <td>Inflation hedge & diversification</td>
+                        </tr>
+                        <tr>
+                            <td><strong>Cryptocurrency</strong></td>
+                            <td>5.00%</td>
+                            <td>$4,500</td>
+                            <td>Controlled high-risk exposure</td>
+                        </tr>
+                        <tr class="table-footer">
+                            <td><strong>Total Invested</strong></td>
+                            <td><strong>100%</strong></td>
+                            <td><strong>$90,000</strong></td>
+                            <td>$90k invested, $10k reserved</td>
+                        </tr>
+                        <tr>
+                            <td><strong>Dry Powder (Cash)</strong></td>
+                            <td>—</td>
+                            <td>$10,000</td>
+                            <td>Reserve for opportunities</td>
+                        </tr>
+                        <tr class="table-footer">
+                            <td><strong>Total Capital</strong></td>
+                            <td><strong>—</strong></td>
+                            <td><strong>$100,000</strong></td>
+                            <td></td>
+                        </tr>
+                    </tbody>
+                </table>
+            </div>
+        </div>
+
+        <!-- Visual Allocation Breakdown -->
+        <div class="card">
+            <h2>Visual Allocation Breakdown</h2>
+            <div class="grid grid-2">
+                <div>
+                    <h3>Percentage Allocation</h3>
+                    <div style="margin-top: 1.5rem;">
+                        <div class="mb-3">
+                            <div style="display: flex; justify-content: space-between; align-items: center; margin-bottom: 0.5rem;">
+                                <strong>Equities</strong>
+                                <span class="badge medium-risk">50%</span>
+                            </div>
+                            <div class="progress-bar">
+                                <div class="progress-fill" style="width: 50%; background: linear-gradient(90deg, #3498db, #5dade2);">$45,000</div>
+                            </div>
+                        </div>
+                        <div class="mb-3">
+                            <div style="display: flex; justify-content: space-between; align-items: center; margin-bottom: 0.5rem;">
+                                <strong>Bonds / Fixed Income</strong>
+                                <span class="badge low-risk">30%</span>
+                            </div>
+                            <div class="progress-bar">
+                                <div class="progress-fill" style="width: 30%; background: linear-gradient(90deg, #27ae60, #2ecc71);">$27,000</div>
+                            </div>
+                        </div>
+                        <div class="mb-3">
+                            <div style="display: flex; justify-content: space-between; align-items: center; margin-bottom: 0.5rem;">
+                                <strong>Commodities</strong>
+                                <span class="badge warning">15%</span>
+                            </div>
+                            <div class="progress-bar">
+                                <div class="progress-fill" style="width: 15%; background: linear-gradient(90deg, #f39c12, #f1c40f);">$13,500</div>
+                            </div>
+                        </div>
+                        <div class="mb-3">
+                            <div style="display: flex; justify-content: space-between; align-items: center; margin-bottom: 0.5rem;">
+                                <strong>Cryptocurrency</strong>
+                                <span class="badge very-high-risk">5%</span>
+                            </div>
+                            <div class="progress-bar">
+                                <div class="progress-fill" style="width: 5%; background: linear-gradient(90deg, #e74c3c, #c0392b);">$4,500</div>
+                            </div>
+                        </div>
+                    </div>
+                </div>
+                <div>
+                    <h3>Dollar Distribution</h3>
+                    <div class="stat-box" style="background: linear-gradient(135deg, #3498db, #5dade2); margin-bottom: 1rem;">
+                        <div class="stat-label">Equities</div>
+                        <div class="stat-value">$45,000</div>
+                        <div class="stat-label">Core growth engine</div>
+                    </div>
+                    <div class="stat-box" style="background: linear-gradient(135deg, #27ae60, #2ecc71); margin-bottom: 1rem;">
+                        <div class="stat-label">Bonds / Fixed Income</div>
+                        <div class="stat-value">$27,000</div>
+                        <div class="stat-label">Stability & income</div>
+                    </div>
+                    <div class="stat-box" style="background: linear-gradient(135deg, #f39c12, #f1c40f); margin-bottom: 1rem;">
+                        <div class="stat-label">Commodities</div>
+                        <div class="stat-value">$13,500</div>
+                        <div class="stat-label">Inflation hedge</div>
+                    </div>
+                    <div class="stat-box" style="background: linear-gradient(135deg, #e74c3c, #c0392b);">
+                        <div class="stat-label">Cryptocurrency</div>
+                        <div class="stat-value">$4,500</div>
+                        <div class="stat-label">High-risk exposure</div>
+                    </div>
+                </div>
+            </div>
+        </div>
+
+        <!-- Asset Class Details -->
+        <div class="grid grid-2">
+            <div class="card">
+                <h2>Equities - $45,000 (50%)</h2>
+                <div class="success-box">
+                    <strong>Purpose:</strong> Core growth engine
+                </div>
+                <ul class="styled-list mt-3">
+                    <li><span>Target Holdings</span><span class="fw-bold">8-10 stocks</span></li>
+                    <li><span>Avg Position Size</span><span class="fw-bold">$3,000-$4,500</span></li>
+                    <li><span>Max Position Size</span><span class="fw-bold">$5,400 (6%)</span></li>
+                    <li><span>Current Holdings</span><span class="badge completed">11 stocks</span></li>
+                </ul>
+                <div class="info-box mt-3">
+                    Mix of large-, mid-, and small-cap stocks diversified by sector
+                </div>
+            </div>
+
+            <div class="card">
+                <h2>Bonds - $27,000 (30%)</h2>
+                <div class="success-box">
+                    <strong>Purpose:</strong> Stability & income
+                </div>
+                <ul class="styled-list mt-3">
+                    <li><span>Target Holdings</span><span class="fw-bold">4-6 positions</span></li>
+                    <li><span>Avg Position Size</span><span class="fw-bold">$4,000-$5,000</span></li>
+                    <li><span>Max Position Size</span><span class="fw-bold">$5,400</span></li>
+                    <li><span>Current Holdings</span><span class="badge pending">TBD</span></li>
+                </ul>
+                <div class="info-box mt-3">
+                    50-60% investment-grade, 20-30% Treasuries, 10-20% high-yield
+                </div>
+            </div>
+
+            <div class="card">
+                <h2>Commodities - $13,500 (15%)</h2>
+                <div class="success-box">
+                    <strong>Purpose:</strong> Inflation hedge & diversification
+                </div>
+                <ul class="styled-list mt-3">
+                    <li><span>Target Holdings</span><span class="fw-bold">3-4 positions</span></li>
+                    <li><span>Avg Position Size</span><span class="fw-bold">$3,000-$4,500</span></li>
+                    <li><span>Max Position Size</span><span class="fw-bold">$5,400</span></li>
+                    <li><span>Current Holdings</span><span class="badge pending">TBD</span></li>
+                </ul>
+                <div class="info-box mt-3">
+                    Energy, metals, agriculture mix for balanced commodity exposure
+                </div>
+            </div>
+
+            <div class="card">
+                <h2>Cryptocurrency - $4,500 (5%)</h2>
+                <div class="warning-box">
+                    <strong>Purpose:</strong> Controlled high-risk exposure
+                </div>
+                <ul class="styled-list mt-3">
+                    <li><span>Target Holdings</span><span class="fw-bold">2 positions</span></li>
+                    <li><span>Avg Position Size</span><span class="fw-bold">$2,250</span></li>
+                    <li><span>Max Position Size</span><span class="fw-bold">$4,500</span></li>
+                    <li><span>Current Holdings</span><span class="badge pending">TBD</span></li>
+                </ul>
+                <div class="info-box mt-3">
+                    1 core asset (e.g., Bitcoin), 1 speculative position
+                </div>
+            </div>
+        </div>
+
+        <!-- Dry Powder Strategy -->
+        <div class="card">
+            <h2>Dry Powder Strategy</h2>
+            <div class="grid grid-2">
+                <div>
+                    <h3>Reserve Details</h3>
+                    <div class="stat-box warning">
+                        <div class="stat-label">Cash Reserve</div>
+                        <div class="stat-value">$10,000</div>
+                        <div class="stat-label">10% of total capital</div>
+                    </div>
+                    <div class="info-box mt-3">
+                        <strong>Purpose:</strong> Reserve for opportunities when markets fall
+                    </div>
+                </div>
+                <div>
+                    <h3>Deployment Rules</h3>
+                    <ul class="styled-list">
+                        <li>
+                            <span>Minimum Cash Reserve</span>
+                            <span class="fw-bold">$3,000 at all times</span>
+                        </li>
+                        <li>
+                            <span>Deployment Trigger</span>
+                            <span class="fw-bold">Market falls ≥10%</span>
+                        </li>
+                        <li>
+                            <span>Usage</span>
+                            <span class="badge medium-risk">High-conviction buys only</span>
+                        </li>
+                    </ul>
+                    <div class="success-box mt-3">
+                        Deploy dry powder in market dips to buy quality assets on sale
+                    </div>
+                </div>
+            </div>
+        </div>
+
+        <!-- Total Holdings Target -->
+        <div class="card">
+            <h2>Total Holdings Target</h2>
+            <div class="info-box">
+                <strong>Target Range:</strong> 18-22 total holdings across all asset classes for balanced diversification
+            </div>
+            <div class="table-container mt-3">
+                <table>
+                    <thead>
+                        <tr>
+                            <th>Asset Class</th>
+                            <th>Target Holdings</th>
+                            <th>Current Status</th>
+                            <th>Average Position</th>
+                            <th>Max Position</th>
+                        </tr>
+                    </thead>
+                    <tbody>
+                        <tr>
+                            <td>Equities</td>
+                            <td>8-10</td>
+                            <td><span class="badge completed">11 holdings</span></td>
+                            <td>$3,000-$4,500</td>
+                            <td>$5,400 (6%)</td>
+                        </tr>
+                        <tr>
+                            <td>Bonds</td>
+                            <td>4-6</td>
+                            <td><span class="badge pending">To be deployed</span></td>
+                            <td>$4,000-$5,000</td>
+                            <td>$5,400</td>
+                        </tr>
+                        <tr>
+                            <td>Commodities</td>
+                            <td>3-4</td>
+                            <td><span class="badge pending">To be deployed</span></td>
+                            <td>$3,000-$4,500</td>
+                            <td>$5,400</td>
+                        </tr>
+                        <tr>
+                            <td>Cryptocurrency</td>
+                            <td>2</td>
+                            <td><span class="badge pending">To be deployed</span></td>
+                            <td>$2,250</td>
+                            <td>$4,500</td>
+                        </tr>
+                        <tr class="table-footer">
+                            <td><strong>Total</strong></td>
+                            <td><strong>18-22</strong></td>
+                            <td><strong>11 deployed</strong></td>
+                            <td colspan="2"><strong>Balanced diversification</strong></td>
+                        </tr>
+                    </tbody>
+                </table>
+            </div>
+        </div>
+    </div>
+</body>
+</html>
